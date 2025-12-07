@@ -143,7 +143,6 @@ const sendRfpToVendors = async (req, res) => {
                 // Continue sending to others
             }
         }
-
         await db('rfps').where({ id }).update({ status: 'sent' });
 
         res.json({ message: 'RFP sent successfully' });
